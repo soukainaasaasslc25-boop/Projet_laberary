@@ -41,6 +41,8 @@ id_ouvrage int ,
 foreign key (id_ouvrage) references Ouvrage(id_ouvrage),
 FOREIGN KEY (id_auteur) REFERENCES Auteur(id_auteur)
 );
+ALTER TABLE Ouvrage_Auteur 
+ADD COLUMN id_auteur_ouvrage INT AUTO_INCREMENT PRIMARY KEY FIRST;
 create table Emprunt(
 id_emprunt int auto_increment primary key,
 date_emprunt DATE NOT NULL,
